@@ -1,0 +1,251 @@
+\documentclass{article}
+\begin{document}
+
+\title{Measuring Engineering} \author{Liam Greene 15320482}
+
+\maketitle
+
+\begin{abstract} To deliver a report that considers the ways in which the software engineering process can be measured and assessed in terms of measurable data, an overview of the computational platforms available to perform this work, the algorithmic approaches available, and the ethics concerns surrounding this kind of analytics. \end{abstract}
+
+\section{Introduction} Software engineering is defined as the systematic application of scientific and technological knowledge, methods, and experience to the design, implement, test, and document software.\cite{def} With the growing prevalence of tech start-ups, software engineering is a growing field. However, with 92\% of start-ups failing\cite{startup}, it is clear that more procedures must be put in place to study and improve this performance. Various measures of data are collected throughout the software development life cycle aiming to continually improve the software process. This data is used in estimation, quality control, productivity assessment, project control, design insight and future decision making throughout a software project. This essay intends to deal with the issue of measuring such an encompassing term to assess the quality of the engineered product or system and contemplate some of the ethical issues that arise from such procedures.
+
+\section{Measuring Data} Data measurement is an effective management tool that is composed of five activities: \cite{fcaif} \newline
+
+\hspace*{-3.5cm}
+\begin{tabular}{||c c||} 
+\hline
+Formulation: & Performing measurements and developing appropriate metrics for software under consideration. \\ 
+\hline
+Collection: & Collecting data to derive the formulated metrics. \\ 
+\hline
+Analysis: & Calculating metrics through tools. \\
+\hline
+Interpretation: & This analyses the metrics to attain insight into the quality of representation. \\
+\hline
+Feedback: & Communicating recommendations derived from product metrics to the software team. \\
+\hline
+\end{tabular}
+
+
+Software engineering measurements can be subcategorised into direct measures and indirect measures. Direct measures includes data that maps information from the empirical world to the formal, relational world\cite{direct}, such as cost and lines of code produced. Indirect measures include data that we are unable to describe empirically such as quality, reliability, and complexity etc. Indirect measures are often the hardest to successfully gather given their inherent intricacy. \newline
+
+Software engineering measurements can be further divided into software metrics, procurement metrics, production metrics, operations and maintenance metrics, usability metrics and desirable characteristics metrics amongst others. As the below table details, measurement processes are not exclusive to one metric. \newline
+
+\hspace*{-2cm}\begin{tabular}{ |p{2.5cm}||p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}| }
+\hline
+\multicolumn{5}{|c|}{Software Engineering Metrics} \\
+\hline
+Software & Procurement & Production & Operations and Maintenance & Usability \\
+\hline
+Code Coverage & Return on Investment \newline & First Pass Yield & Downtime & Bugs \newline \\
+Load Time & Cycle Time & Throughput Yield \newline & Spare Parts Needed \newline & Customer Satisfaction \\
+Classes/Interfaces & Quality & Cycle Time & \% Spent on Maintenance \newline & ISO \\
+Number of Lines & Cost Savings & On-Time Delivery to Commit & Completion Rate & \\
+Program Size & & & & \\
+Execution Time & & & & \\
+\hline
+\end{tabular} \newline \newline
+
+Data collection can be costly, and if the data collection process is too time consuming, it becomes destructive, encouraging the use of metrics that are easy to gather and compute. Therefore, the goal of the data collection should be established with a clear concentration on precision, allowing the information to be focused, direct and accurate, to lower the costs of the collection, the storage and the evaluation of the data. 
+
+Various forms of data collection were proposed to fit this information. Dr. Victor Bassili proposed his Goal Question Metric (GQM), a top-down, goal oriented framework for gathering data. The GQM is presented as a seven stop process. \cite{wiki}
+
+\begin{center}
+\begin{tabular}{||c c||} 
+\hline
+Step 1: & Develop a set of Goals \\ 
+\hline
+Step 2: & Develop a set of questions that characterise the goals. \\ 
+\hline
+Step 3: & Specify the metrics needed to answer the questions. \\
+\hline
+Step 4: & Develop mechanisms for data collection and analysis. \\
+\hline
+Step 5: & Collect validate and analyse the data. \\
+\hline
+Step 6: & Analyse in a post mortem fashion \\ 
+\hline
+Step 7: & Provide feedback to stakeholders \\
+\hline
+\end{tabular}
+\end{center}
+
+GQM can help in understanding and evaluating an organisation's software engineering practises, while helping to direct the software engineering process due to its emphasis on the establishment of clear goals. However, GQM has been criticised as the selection process of metrics is not clearly defined, and this lack of guidance can lead to bias in metric selection. Technical support for GQM is steadily improving, but not yet perfected. \newline 
+
+Orthogonal Defect Classification (ODC) is a process developed by IBM for the collection of data relating to defects in the software engineering processes ranging from waterfall to agile software engineering. \cite{ODC} ODC provides information on the development process and testing process, resulting in an analysis that is more data intensive and computationally based as opposed to human analysis. \newline
+
+Other forms of data measurements exist, and each operation will require a specific method of data collection.
+
+\section{Assessing Data} Data analytics is the practice of collecting, analysing, and interpreting data to detect trends and patterns, with the aim of enhancing business productivity and revenue. Once an organisation has decided on their selected data metrics, the method of data measurement and the method of data collection, they must begin to gather and store the data for analysis. \newline
+
+Six Sigma is one of the most popular data-driven approaches for eliminating defects in a process, which has been implemented in software engineering through the use of analysis tools, particularly with the goal of removing software bugs while improving software quality. Six Sigma is comprised of two main sub-methodologies, DMAIC and DMADV, standing for Define requirements, Measure performance, Analyse relationships, Improve performance, Control performance and Define requirements, Measure performance, Analyse relationships, Design solution, Verify functionality respectfully. \newline
+
+DMAIC begins with boundary analysis and qualitative analysis, in order to collect data and identify the relative problem, then find the cause through metrics and analysis tools. DMAIC is a continuous control activity that should be implemented to improve and optimise data collection, with the purpose to ensure such problem will not happen in the future. \newline
+
+Six Sigma also has its limitations. It uses statistical analysis tools to find defects in current execution process, but the success of these tools can often be affected by the size the project analysed. The success ratio is higher within small projects when using Six Sigma to manage their project than resolving a problem in a large organization or project. \newline
+
+Data assessment is often associated with the process of gaining an initial understanding of data within the context of the DQAF [data quality assessment framework]. A measurement system analysis (MSA) is a commonly used DQAF. An MSA is an in-depth evolution of the measurement process that identifies variables in the measurement process through a detailed assessment of the data measurements used. These variables are assessed on five bases: accuracy, linearity, stability, repeatability and reproducibility. \newline
+
+Stability refers to the ability of a project to produce consistent results over time, with a specific emphasis on bugs when applying this method to software engineering. Accuracy compares the true or ideal value to average value produced over multiple tests with the same sample. Linearity evaluates the accuracy over multiples tests using different samples, with the aim of identifying whether the bugs are affected when different variables are changed, or whether the problem remains the same regardless of the variables. Repeatability and Reproducibility survey the precision when using the same appraisers or different appraisers respectfully, as appraisers can test the same program multiple times and receive multiple outcomes. \newline
+
+After examination, the five variables are plugged into a Gauge R\&R mathematical calculation or similar, that determines the total variation and specification tolerance and management system error. A general benchmark of 30\% is administered, with a measurement system with an error in excess of 30\% deemed incapable for usage as the basis of decision making. However, this system is dependent on the organisation's needs. If a company operates with a policy of perfection then an error above 10\% could be considered unacceptable, or an organisation that requires a steady product could focus its effort on solely reducing the error in stability at the cost of making further testing more expensive. \newline
+
+By understanding existing measurement systems a team can better understand the data provided by those systems and make better business decisions. \cite{morestream}
+
+\section{Computational Platforms \& Algorithmic Approaches to Perform This Work} Computational modules have been developed to improve and streamline the measurement and assessment of data. One such module is the previously mentioned Gauge R\&R, which stands for "Gauge Repeatability and Reproducibility'', with the purpose of confirming the extent of variation in the data collection process. All forms of data collection will contain some random variance, and Gage R\&R studies can prevent organisations making costly measurement errors. There is three main ways to calculate Gauge R\&R results, with the most common method identifying the average and range. This method can be simply calculated using spread sheets. The Analysis of Variants (ANOVA) module is the most appropriate when examining the software engineering process, and is calculated using computational software, with the results detailed below:
+
+\begin{center}
+\begin{tabular}{||c c||} 
+\hline
+Variance & Acceptability \\ 
+\hline
+Less than 1\%: & Acceptable \\ 
+\hline
+Between 1\% and 9\%: & Acceptable depending process cost and application \\
+\hline
+Greater than 9\%: & Unacceptable, process must be improved \\
+\hline
+\end{tabular}
+\end{center}
+
+Context-aware Software Engineering Environment Event-driven Framework (CoSEEEK) is a framework that provides automated guidance for software developers throughout the software engineering process, combining quality management, process management, context management, and knowledge management and providing support adapted for the needs of the current project situation and CoSEEEK user. The automated data is attuned based on the context-awareness and process-orientation, providing a CoSEEEK user with computational data that relates to their needs. \cite{coseeek} \newline
+
+The Capability Maturity Model Integration (CMMI) is another computational process model that clearly defines what an organization should do to promote actions that improve performance. CMMI was developed at the Software Engineering Institute at Carnegie Mellon University with representation from defence, industry, government, and academia, and is now operated and maintained by the CMMI Institute, an operating unit of CMU. It is the successor of the popular Software CMM. \cite{cmmi} \newline
+
+The CMMI is used to help companies answer the “how do we know?” questions: 
+
+\begin{center}
+\begin{tabular}{||c||} 
+\hline How do we know what we are good at? \\ 
+\hline
+How do we know if the process we use is working well? \\ 
+\hline
+How do we know if our requirements change process is useful? \\
+\hline
+How do we know if our products are as good as they can be? \\
+\hline
+How do we know if our products are as good as they can be? \\
+\hline
+\end{tabular} \newline
+\end{center} 
+CMMI is a behavioural model that is comprised of "Process Areas", that are to be adapted to the behaviours of the company, that explains the processes a company utilises and the behaviours that need to be defined given these processes. The CMMI for Development contains 22 process areas, while the CMMI for Services has 24. \newline
+
+Organisations must choose whether to use a "Staged'' or "Continuous'' representation. The former follows a pre-defined pattern of process areas that are defined by Maturity Level, while the latter’s processes are based on their interest in improving only specific areas. \newline
+
+Process Areas are further broken down to specify Specific Goals (SGs) and Specific Practices (SPs). These practices define the expected behaviours of projects and organizations. There are also twelve “Generic Practices (GPs)” that provide guidance for organizational excellence including behaviours such as setting expectations, training, measuring quality, monitoring process performance, and evaluating compliance. \cite{cmmi} \newline
+
+Organisations are then rated based on the designing of these behaviours. However, these ratings are broadly defined and broadly interpreted, explaining why CMMI ratings are not a standard, as opposed to the International Organization for Standardization (ISO) requirements. There are five Maturity ratings in the CMMI:
+
+\begin{center}
+\begin{tabular}{||c||} 
+\hline
+Level 1: Initial - Process is poorly controlled and unpredictable.\\ 
+\hline
+Level 2: Managed - Process has met all generic goals. \\ 
+\hline
+Level 3: Defined - Process meets all specific and generic goals and is proactive. \\
+\hline
+Level 4: Quantitatively Managed -All goals are met and process performance\\newline data are collected and statistically analysed and impacts future decisions \\
+\hline
+Level 5: Optimizing - All goals are met and the focus is now on continuous process improvement \\
+\hline
+\end{tabular}
+\end{center}
+
+The Standard CMMI Appraisal Method for Process Improvement (SCAMPI) is a computational method that is tasked to a Certified SCAMPI Lead Appraiser to help your organisation reach a specific level or fine tune its processes. The appraisal process is divided into three categories depending on the organisation's needs. SCAMPI A is the main appraisal method and is the only appraisal method that can result in a Maturity Level Rating. SCAMPI B is used to identify user views of a product and SCAMPI C is typically used as a gap analysis and data collection tool. SCAMPI A results are published on the CMMI Institute Website known as “PARS” making the results available for public viewing. \cite{cmmi} \newline
+
+The aforementioned International Organization for Standardization (ISO) can also be used to compute or assess data. ISO 9000, specifically SO/IEC 90003 Software engineering, details standards to organisations the acquisition, supply, development, operation and maintenance of computer software and related support services. This variant of the ISO was developed by technical committee ISO/IEC JTC 1/SC 7 Software and systems engineering.[1] ISO/IEC 9000-3 was published in December 1997, but was updated to become ISO/IEC 90003 in February 2004. ISO 90003 has a renew cycle of every 5 years. \cite{iso}
+
+The ISO/IEC 90003:2014 adopts the ISO structure in 8 chapters in the following breakdown:
+
+\begin{center}
+\begin{tabular}{||c c||} 
+\hline
+1: & Scope \\ 
+\hline
+2: & Normative references \\ 
+\hline
+3: & Terms and definitions \\
+\hline
+4: & Quality management system. \\
+\hline
+5: & Management responsibility \\
+\hline
+6: & Resource management \\ 
+\hline
+7: & Product realization \\
+\hline
+8: & Measurement, analysis and improvement \\
+\hline
+\end{tabular}
+\end{center}
+
+With the rise of organisations realising "you can't manage what you can't measure", the future of automated computational functions for collecting and assessing is bright. 
+
+\section {Ethics Concerns} Given the rise of large data driven organisations such as Facebook or Google, the data collected on individual consumers is rapidly increasing in scope and volume, and this trend will undoubtedly continue as technology becomes a larger part of our lives. The ethical collection and usage of data is an important issue that businesses need to examine during this unique period in history, as there is a fine line between the use and misuse of data in many cases.
+Implementing a Privacy Policy is the first step towards governing ethical data collection, storage and usage in a business, however this is only a foundation. Internal privacy practices, ethical expectations for staff, and regular auditing of privacy practices are all crucial to maintaining an ethical data collection regime. \newline
+
+The collection, assessment, storage and management of data gives rise to ethical concerns regarding the methods used in this process. Data is often separated into two categorises when discussing the ethical concerns regarding its usage. Prospective Data is information that was gathered with explicit consent. Participants must be aware of the data that is being gathered, how the data will be stored and the full extent to which the data will be analysed. Retrospective Data occurs when event or outcome that you are studying has already occurred at the time of data collection. \newline
+
+The first ethical concern regarding information is data storage. While participants in data collection studies should be told who has access to the data, the data must be securely stored for this to hold true. The type of data determines the implications for its storage: \newline
+
+\begin{tabular}{||c c||} 
+\hline
+Identifiable: & Data that contains names or photographical evidence. \\ 
+\hline
+Potentially Identifiable: & Data that could be linked to a person. \\ 
+\hline
+De-identified: & All sensitive information has been whitewashed. \\
+\hline
+Anonymous: & Personal information was never given. \\
+\hline
+\end{tabular}\newline \newline
+
+Data that is identifiable or potentially identifiable is more sensitive than anonymous data and should be treated as such. However, consenting participants should be warned of the potential of a data leak; this consent does that transfer to Retrospective Data, giving rise to further ethical implications regarding the use of this data. Retrospective data is often created when data is archived for secondary analysis, resulting in the ability to validate or refute conclusions and reducing the burden of repetitive data collection. While data archiving provides an obvious benefit to science, ethical concerns must be raised as the publication of data could result in the data being used in ways that the participant did not willingly consent to. To address this issue, researchers must ensure the future of the data collected is clearly conveyed to the participants and a distinction between formal managed archives verses the open publication of data must be identified. \cite{ethics} When data is collected and stored for the sole use of improving consumer interactions, internal business ethics must be developed and utilised throughout the business. For example, Consumer Relations Management (CRM) data should only be accessible by the relevant areas of the organisation and should only be accessed on a need to know basis. \newline
+
+When evaluating ethical concerns of data collection and analysis during the software engineering process, the question of explicit consent can become blurred in the goal of gathering accurate data that truly reflects the workplace environment. For example, suppose a company plans to examine the number of lines of code each employee writes on average per day. Informing each employee about the data collection, the use of the data and the length of the data collection period is likely to skew the results away from a true representation of the lines written by each employee, as employees would be more likely artificially improve their lines written per day as they now understand that this aspect of their work will be examined. In situations such as this, the ethics can become blurred as one must often decide to respect autonomy and consent in exchange for truly accurate results. \newline
+
+The ethical issues around data collection, storage and usage can appear confusing, making it difficult for an organisation or researcher to discern if they are acting ethically and legally. Following relevant data privacy laws is essential, as is having general respect for the customer’s interests. We must ensure that we only collect the data we need and have explicit consent to gather, store the data in a secure manner, and clearly disclose to participants in your Privacy Policy what we plan to do with the data, and the reason for such usage.  \newline
+
+\section{Conclusion} Since the development of software engineering in the early 1950s, the idea of how best to measure such as process has developed coincidingly. Imperial quality measurements such as speed, usability, testability, readability, size, cost, security, and number of flaws or "bugs" have provided a basis for measuring and analysing software engineering. Further measurements, although harder to quantify such conciseness, and customer satisfaction and benefit to society have also been suggested as a basis for identifying the success of the software engineering process. As the technology grows alongside this process, the collection of data and analysis of data grows in computational automation, improving the process as a whole, but giving rise to ethical concerns that must be contemplated. To conclude on a quote from published software engineer Tom Cargill, "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time'', but future advancements in the software engineering are promising to change this trend. 
+
+\begin{thebibliography}{1}
+
+\bibitem{def} { \em IEEE Standard Glossary of Software Engineering Terminology}, IEEE std 610.12-1990, 1990.
+
+\bibitem{startup} M. Marmer, B. L. Herrmann, E. Dogrultan, R. Berman, C. Eesley, S. Blank, {\em Startup Genome Report Extra: Premature Scaling} , Startup Genome (2011).
+
+\bibitem{direct} N.E. Fenton and S.L. Pfleeger, {\em Software Metrics: A Rigorous and Practical Approach, Second 2nd edition revised ed.} Boston: PWS Publishing, 1997.
+
+\bibitem{fcaif} N.E Fenton, {\em Software Metrics: a Practitioner's Guide to Improved Product Development} Software Engineering Journal, 9(1), 1994,
+
+\bibitem{cmmi} What Is Capability Maturity Model Integration (CMMI)®? | CMMI Institute", Cmmiinstitute.com, 2017. [Online]. Available: http://cmmiinstitute.com/capability-maturity-model-integration. [Accessed: 06- Dec- 2017].
+
+\bibitem {coseeek} CoSEEEK, "CoSEEEK", SourceForge, 2017. [Online]. Available: https://sourceforge.net/projects/coseeek/. [Accessed: 06- Dec- 2017].
+
+\bibitem{morestream}"Measurement System Analysis (MSA) Tutorial", Moresteam.com, 2017. [Online]. Available: https://www.moresteam.com/toolbox/measurement-system-analysis.cfm. [Accessed: 06- Dec- 2017].
+
+\bibitem{wiki} "Software metrics and measurement - Wikiversity", En.wikiversity.org, 2017. [Online]. Available: https://en.wikiversity.org/wiki/Software\_metrics\_and\_measurement. [Accessed: 06- Dec- 2017].
+
+\bibitem{iso} ISO/IEC 90003:2014 - Software engineering -- Guidelines for the application of ISO 9001:2008 to computer software", Iso.org, 2017. [Online]. Available: https://www.iso.org/standard/66240.html. [Accessed: 06- Dec- 2017].
+
+\bibitem {metrics} Fenton, N. E., and Martin, N. (1999) "Software metrics: successes, failures and new directions." Journal of Systems and Software 47.2 pp. 149-157.
+
+\bibitem {metrics2} Stephen H. Kan. 2002. Metrics and Models in Software Quality Engineering (2nd ed.). Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA.
+
+\bibitem {auto} Grambow, G., Oberhauser, R. and Reichert, M. (2013) Automated Software Engineering Process Assessment: Supporting Diverse Models using an Ontology. Int'l Journal on Advances in Software, 6 (1 \& 2). pp. 213-224.
+
+\bibitem {ethics} A. Sillitti, A. Janes, G. Succi, and T. Vernazza, “Collecting, integrating and analyzing software metrics and personal software process data,” in Proceedings of the 29th Euromicro Conference. IEEE, 2003, pp. 336– 342.
+
+\bibitem {auto2} Johnson, Philip M., and Hongbing Kou. "Automated recognition of test-driven development with Zorro." Agile Conference (AGILE), 2007. IEEE, 2007.
+
+\bibitem {silver} Frederick P. Brooks, Jr, "No Silver Bullet Essence and Accidents of Software Engineering", Computer, vol. 20, no. 4, pp. 10-19, 1987.
+
+\bibitem {ODC} Orthogonal Defect Classification (ODC) in Agile Development. M. Jagia, S. Meena, IEEE ISSRE 2009 Supplemental Proceedings, Nov. 2009.
+
+
+
+
+\end{thebibliography}
+
+\end{document}
